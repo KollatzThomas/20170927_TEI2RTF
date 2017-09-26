@@ -71,7 +71,7 @@
         <div id="impress">
             <div class="step">
                 <h4><strong>2017-09-27</strong> | <a href="http://www.itug.de/ITUG2017.html">ITUG
-                        2017 </a>
+                        2017 workshop</a>
                 </h4>
                 <h1 class="down-100">Von TEI XML zu MSWord</h1>
                 <h2 class="red up-25">TUSTEP-Modul #*export</h2>
@@ -94,26 +94,71 @@
                     <a href="https://github.com/kollatzthomas/" title="Thomas Kollatz on GitHub"
                         >KollatzThomas</a> | <a href="https://creativecommons.org/licenses/by/4.0/"
                         >CC-BY 4.0</a>
-                   
                     <br />Akademie der Wissenschaften und Literatur / Digital Academy | Mainz</h5>
             </div>
             <div class="step">
-                <h2>Table of Contents</h2>
+                <h2>Aufbau des Workshops</h2>
                 <ol class="line-height-one-five">
-                    <li> Der Sturm </li>
-                    <li> Digitale Edition</li>
+                    <li> <a href="#eins">#*import</a> </li>
+                    <li> <a href="#zwei">TUSTEP und XML: Editor</a></li>
+                    <li> <a href="#drei">#*export</a><ol>
+                            <li>TUSTEP-Datei</li>
+                            <li>TEI-Datei</li>
+                        </ol>
+                    </li>
+                    <li> <a href="#vier">TUSTEP und XML: TUSCRIPT</a></li>
                 </ol>
             </div>
-            <div class="step">
+            <div class="step" id="eins">
                 <h2 class="red">01</h2>
-                <h3>Der Sturm</h3>
+                <h3>#*import</h3>
             </div>
-           
             <div class="step">
-                <h2 class="red">02</h2>
-                <h3>Digitale Edition</h3>
+                <h2 class="red">#*import</h2>
+                <blockquote>Das Standardmakro #*import ist Teil des modularen TUSTEP
+                    Programmpakets</blockquote>
+                <ul class="line-height-one-five down-50">
+                    <li><code>#*import</code> konvertiert eine Datei aus dem <code>RTF</code>-Format
+                        bzw. dem <code>Word 2003 XML</code>-Format ins <code>TUSTEP</code> interne
+                        Dateiformat und zwar als <code>XML</code>-Datei</li>
+                    <li>Das Modul ist ausführlich dokumentiert: <ul><li><a href="data/importexport.pdf">#*import</a></li></ul></li>
+                        
+                </ul>
+                <blockquote class="centered down-50">Mit <code>#*import</code> wird <em>im
+                    Prinzip</em> jede Office-Datei
+                    in ein vereinfachtes XML-Format konvertiert.</blockquote>
             </div>
-           
+            <div class="step" id="zwei">
+                <h2 class="red">02</h2>
+                <h3>TUSTEP und XML: Editor</h3>
+            </div>
+            <div class="step" id="drei">
+                <h2 class="red">03</h2>
+                <h3>#*export</h3>
+            </div>
+            <div class="step">
+                <h2 class="red">#*export</h2>
+                <blockquote>Das Standardmakro #*export ist Teil des modularen TUSTEP
+                    Programmpakets</blockquote>
+                <ul class="line-height-one-five down-50">
+                    
+                    <li><code>#*export</code> konvertiert eine <code>XML</code>-Datei ins
+                        <code>RTF</code>-Format</li>
+                    <li>Das Modulist dokumentiert:<ul><li><a  target="_blank" href="data/importexport.pdf">#*export</a></li></ul></li>
+                    
+                </ul>
+                <blockquote class="centered down-50">Mit <code>#*export</code> kann <em>im
+                    Prinzip</em> jede XML-Datei und jedes XML-Format
+                    <strong>strukturiert</strong> in gängige Office Programme überführt
+                    werden</blockquote>
+            </div>
+            <div class="step" id="vier">
+                <h2 class="red">04</h2>
+                <h3>TUSTEP und XML: TUSCRIPT</h3>
+            </div>
+            <div class="step" id="vier">
+                <h2 class="red">F A Z I T</h2>
+                           </div>
             <div class="step">
                 <h2 class="red">#*import | #*export</h2>
                 <blockquote>Die Standardmakros #*import und #*export sind Teil des modularen TUSTEP
@@ -123,13 +168,13 @@
                         bzw. dem <code>Word 2003 XML</code>-Format ins <code>TUSTEP</code> interne
                         Dateiformat und zwar als <code>XML</code>-Datei</li>
                     <li><code>#*export</code> konvertiert eine <code>XML</code>-Datei ins
-                            <code>RTF</code>-Format</li>
+                        <code>RTF</code>-Format</li>
                     <li>Beide Module sind <a href="data/data/importexport.pdf">dokumentiert</a>
                         (wenn auch nicht Teil des TUSTEP Handbuchs) …</li>
                 </ul>
                 <blockquote class="centered down-50">Mit <code>#*export</code> kann <em>im
-                        Prinzip</em> jede XML-Datei und jedes XML-Format
-                        <strong>strukturiert</strong> in gängige Office Programme überführt
+                    Prinzip</em> jede XML-Datei und jedes XML-Format
+                    <strong>strukturiert</strong> in gängige Office Programme überführt
                     werden</blockquote>
             </div>
             <div class="step">
@@ -144,11 +189,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>109 XML Dateien</td>
+                            <td>XML Datei</td>
 
                             <td>
                                 <ul class="six columns line-height-one-five">
-                                    <li><code>sturm.tf</code>
+                                    <li><code>tustep.tf</code>
                                         <br />TUSTEP-XML-Datei</li>
                                     <li><code>style.tf</code>
                                         <br />TUSTEP-Datei mit STYLE Definitionen </li>
@@ -157,26 +202,21 @@
                                 </ul>
                             </td>
 
-                            <td>RTF-Datei <br />TOC <br />Register</td>
+                            <td><code>ergebnis.rtf</code>
+                                <br/>RTF-Datei </td>
                         </tr>
                         <tr>
                             <td class="centered" colspan="3"
-                                    ><code>#*export,sturm.tf,sturm.rtf,de=style.tf</code></td>
+                                    ><code>#*export,tustep.tf,ergebnis.rtf,de=style.tf</code></td>
                         </tr>
 
                     </tbody>
                 </table>
             </div>
             <div class="step">
-                <h2 class="red">Mockup</h2>
-                <div class="row">
-                    <div class="four columns">
-                        <div class="mfp-lightbox">
-                            <a href="resources/img/mockup.jpg">
-                                <img src="resources/img/mockup.jpg" style="width:35rem" /></a>
-                        </div>
-                    </div>
-                    <div class="eight columns">
+                <h2 class="red">Elemente einer TEI XML-Datei</h2>
+                
+                    <div class="twalve columns">
                         <ul class="line-height-one-five">
                             <li>Metadaten <code>TeiHeader</code></li>
                             <li>Anrede <code>opener</code></li>
@@ -191,7 +231,7 @@
                                 </ul></li>
                         </ul>
                     </div>
-                </div>
+                <blockquote>Transformation semantischer Auszeichnung in Typographie. Die Semantik der XML-Datei kann in der Form von Formatvorlagen in die RTF-Datei übertragen werden.</blockquote>
             </div>
             <div class="step">
                 <h2 class="red">$teixml2rtf – the movie</h2>
@@ -244,15 +284,16 @@
             <div class="step">
                 <h2 class="red">Beispiel: Registererstellung</h2>
                 <div class="row">
-                    <h3>Semantische TEI XML Auszeichnung <code>&lt;persName&gt;</code> transformieren</h3>
+                    <h3>Semantische TEI XML Auszeichnung <code>&lt;persName&gt;</code>
+                        transformieren</h3>
                     <div>
-                        
                         <dl class="line-height-one-five">
                             <dt>Typographie</dt>
                             <dd>Personenangaben sperren</dd>
-                            <dt>Register</dt> <dd>Normalisierte Form in Personenregister aufnehmen</dd></dl>
-                        
-                </div>
+                            <dt>Register</dt>
+                            <dd>Normalisierte Form in Personenregister aufnehmen</dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
             <div class="step">
@@ -329,18 +370,14 @@ ENDIF</code></pre>
             <div class="step">
                 <h2 class="red">Fazit</h2>
                 <div class="mfp-lightbox row">
-                    
                     <div class="six columns">
-                        
-                    <a href="resources/img/schema.png">
-                        <img src="resources/img/schema.png" /></a>
+                        <a href="resources/img/schema.png">
+                            <img src="resources/img/schema.png" /></a>
                     </div>
                     <div class="six columns">
-                        
                         <ul class="line-height-five-one">
                             <li>tja </li>
                         </ul>
-                        
                     </div>
                 </div>
             </div>
@@ -354,7 +391,10 @@ ENDIF</code></pre>
                 <h2>Literatur</h2>
                 <h4>Sturm</h4>
                 <ul class="small line-height-one-five">
-                    <li> Marjam Mahmoodzada: Mahmoodzada, Marjam: Eine digitale Edition. Briefe von Jacoba van Heemskerck und Franz Marc an Herwarth Walden (1914-1915), Mainz 2017 (Masterarbeit). <a href="http://www.students.uni-mainz.de/mmahmood/html/"
+                    <li> Marjam Mahmoodzada: Mahmoodzada, Marjam: Eine digitale Edition. Briefe von
+                        Jacoba van Heemskerck und Franz Marc an Herwarth Walden (1914-1915), Mainz
+                        2017 (Masterarbeit). <a
+                            href="http://www.students.uni-mainz.de/mmahmood/html/"
                             >http://www.students.uni-mainz.de/mmahmood/html/</a>
                     </li>
 
