@@ -124,13 +124,105 @@
                     <li>Das Modul ist ausführlich dokumentiert: <ul><li><a href="data/importexport.pdf">#*import</a></li></ul></li>
                         
                 </ul>
-                <blockquote class="centered down-50">Mit <code>#*import</code> wird <em>im
-                    Prinzip</em> jede Office-Datei
+                <blockquote class="centered down-50">Mit <code>#*import</code> wird eine Office-Datei
                     in ein vereinfachtes XML-Format konvertiert.</blockquote>
+            </div>
+            <div class="step">
+                <h2 class="red">Nützliche Kommandos</h2>
+                <table>
+                    <thead>
+                        <tr><th>Aufruf</th><th></th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>#info,import</code></td>
+                            <td>Anzeige der Spezifikationen des Standardmakros <code>#*import</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>#zebe,import</code></td>
+                            <td>Anzeige der kompletten Beschreibung des Standardmakros <code>#*import</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red">Syntax</h2>
+                <table>
+                    <thead>
+                        <tr><th><code>#*import,</code></th><th></th><th></th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>quelle,</code></td>
+                            <td>Name der Quelldatei</td>
+                            <td>RTF | Word 2003 XML-Dokument</td>
+                        </tr>
+                        <tr>
+                            <td><code>ziel,</code></td>
+                            <td>Name der Zieldatei</td>
+                            <td>TUSTEP Datei</td>
+                        </tr>
+                        <tr>
+                            <td><code>modus,</code></td>
+                            <td>Modus </td>
+                            <td>keine Angaben nötig</td>
+                        </tr>
+                        <tr>
+                            <td><code>loeschen,</code></td>
+                            <td>+ | - </td>
+                            <td>löschen | nicht löschen der Zieldateien</td>
+                        </tr>
+                        <tr><td><code>ignorieren,</code></td>
+                            <td>- | +</td>
+                        <td>Ignorierbare Tags und Attribute ausgeben | nicht ausgeben</td></tr>
+                    </tbody>
+                </table>
+                <blockquote class="down-50 centered">Beispiel: <code>#*import,beispiel.rtf,beispiel.tf,,lo=+,ig=-</code></blockquote>
+              
+            </div>
+            <div class="step">
+                
+                <blockquote class="centered">Import der RTF-Datei <a href=""><code>beispiel.rtf</code></a></blockquote>
+                <div class="substep">
+                    <pre><code>#an,beispiel.rtf
+#da,beispiel.tf
+#*import,beispiel.rtf,beispiel.tf,,lo=+,ig=-</code></pre>
+                                            
+                </div>
+                
             </div>
             <div class="step" id="zwei">
                 <h2 class="red">02</h2>
                 <h3>TUSTEP und XML: Editor</h3>
+            </div>
+            <div class="step">
+                <div><h2 class="red">Editoranweisungen für Tags</h2>
+                    <div class="row">
+                        <div class="six columns">
+                            <dl>
+                                <dt>Tags überprüfen</dt>
+                                <dd><code>tpv</code>    Tagprüfung vorwärts</dd>
+                                <dd><code>tpr</code>    Tagprüfung rückwärts</dd>
+                                <dt>Tags anzeigen</dt>
+                                
+                                <dd><code>tl</code>     Tagliste mit Häufigkeit</dd>
+                                <dd><code>tlh</code>    Tagliste mit Hierarchie "von oben" sortiert</dd>
+                                <dd><code>tli</code>    Tagliste mit Hierarchie "von unten" sortiert (invers)</dd>
+                                <dd><code>tz</code>    Tagzeige</dd>
+                                
+                                <dd class="down-25"><code>alt-g</code>  SELECT_TAGS</dd>
+                            </dl></div>
+                        <div class="six columns">
+                            <dl>
+                                <dt>Tags autovervollständigen</dt>
+                                <dd><code>alt-a</code>Anfangstag einfügen</dd>
+                                <dd><code>alt-e</code>Endetag einfügen</dd>
+                                <dt>Weitere Anweisungen</dt>
+                                <dd><code>alt-t</code></dd>
+                                <dd><code>alt-v</code></dd>
+                                <dd><code>alt-r</code></dd>                 
+                            </dl> </div></div>
+                </div>
             </div>
             <div class="step" id="drei">
                 <h2 class="red">03</h2>
@@ -156,26 +248,18 @@
                 <h2 class="red">04</h2>
                 <h3>TUSTEP und XML: TUSCRIPT</h3>
             </div>
-            <div class="step" id="vier">
-                <h2 class="red">F A Z I T</h2>
-                           </div>
+            
+            
             <div class="step">
-                <h2 class="red">#*import | #*export</h2>
-                <blockquote>Die Standardmakros #*import und #*export sind Teil des modularen TUSTEP
-                    Programmpakets</blockquote>
-                <ul class="line-height-one-five down-50">
-                    <li><code>#*import</code> konvertiert eine Datei aus dem <code>RTF</code>-Format
-                        bzw. dem <code>Word 2003 XML</code>-Format ins <code>TUSTEP</code> interne
-                        Dateiformat und zwar als <code>XML</code>-Datei</li>
-                    <li><code>#*export</code> konvertiert eine <code>XML</code>-Datei ins
-                        <code>RTF</code>-Format</li>
-                    <li>Beide Module sind <a href="data/data/importexport.pdf">dokumentiert</a>
-                        (wenn auch nicht Teil des TUSTEP Handbuchs) …</li>
-                </ul>
-                <blockquote class="centered down-50">Mit <code>#*export</code> kann <em>im
-                    Prinzip</em> jede XML-Datei und jedes XML-Format
-                    <strong>strukturiert</strong> in gängige Office Programme überführt
-                    werden</blockquote>
+                <h2 class="red">Transformation von TEI nach RTF</h2>
+                <h3>Schema</h3>
+                <div class="mfp-lightbox row">
+                    <div class="six columns">
+                        <a href="resources/img/schema.png">
+                            <img src="resources/img/schema.png" /></a>
+                    </div>
+                    
+                </div>
             </div>
             <div class="step">
                 <h2 class="red">Transformation von TEI nach RTF</h2>
@@ -214,9 +298,16 @@
                 </table>
             </div>
             <div class="step">
-                <h2 class="red">Elemente einer TEI XML-Datei</h2>
-                
-                    <div class="twalve columns">
+                <h2 class="red">Praxisbeispiel: Der Sturm</h2>
+                <h3>Elemente einer TEI XML-Datei</h3>
+                <div class="row">
+                    <div class="four columns">
+                        <div class="mfp-lightbox">
+                            <a target="_blank" href="resources/img/mockup.jpg">
+                                <img src="resources/img/mockup.jpg" style="width:25rem" /></a>
+                        </div>
+                    </div>
+                    <div class="eight columns">
                         <ul class="line-height-one-five">
                             <li>Metadaten <code>TeiHeader</code></li>
                             <li>Anrede <code>opener</code></li>
@@ -231,6 +322,7 @@
                                 </ul></li>
                         </ul>
                     </div>
+                </div>
                 <blockquote>Transformation semantischer Auszeichnung in Typographie. Die Semantik der XML-Datei kann in der Form von Formatvorlagen in die RTF-Datei übertragen werden.</blockquote>
             </div>
             <div class="step">
@@ -249,6 +341,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- 
             <div class="step">
                 <h2 class="red">Beispiel: Registererstellung</h2>
                 <div class="mfp-lightbox row">
@@ -296,6 +389,7 @@
                     </div>
                 </div>
             </div>
+           
             <div class="step">
                 <h2 class="red">Beispiel: Registererstellung</h2>
                 <pre><code>&lt;persName ref="http://d-nb.info/gnd/118559737" &gt;Kandinsky&lt;/persName&gt;</code></pre>
@@ -303,7 +397,7 @@
                 <pre><code>ELSEIF (a.hn."persName") THEN
   ref=GET_ATTRIBUTE (a,"ref","")
   a="&lt;persName&gt;"
- --- Personenregistereintrag vorbereiten
+ -Personenregistereintrag vorbereiten
  IF (stck_n.nc." &lt;opener&gt; "," &lt;closer&gt; ") THEN
   DICT persons LOOKUP ref,num,cnt,regentry
   t=CONCAT (t,"&lt;xe name='name'&gt;",regentry,"&lt;/xe&gt;")
@@ -312,7 +406,7 @@
    DICT persons4html ADD ref,num,cnt,regentry,folio
   ELSE
    folios=APPEND(folioalt,folio)
- -- Mehrere Verweise auf einen Brief zusammenfassen
+ - Mehrere Verweise auf einen Brief zusammenfassen
    folios=REDUCE (folios)
    DICT persons4html UPDATE/QUIET ref,num,cnt,regentry,folios
   ENDIF
@@ -367,16 +461,28 @@ ENDIF</code></pre>
                     </div>
                 </div>
             </div>
-            <div class="step">
-                <h2 class="red">Schema</h2>
-                <div class="mfp-lightbox row">
-                    <div class="six columns">
-                        <a href="resources/img/schema.png">
-                            <img src="resources/img/schema.png" /></a>
-                    </div>
-                    
-                </div>
+            -->
+            <div class="step" id="vier">
+                <h2 class="red">F A Z I T</h2>
             </div>
+            <div class="step">
+                <h2 class="red">#*import | #*export</h2>
+                <blockquote>Die Standardmakros #*import und #*export sind Teil des modularen TUSTEP
+                    Programmpakets</blockquote>
+                <ul class="line-height-one-five down-50">
+                    <li><code>#*import</code> konvertiert eine Datei aus dem <code>RTF</code>-Format
+                        bzw. dem <code>Word 2003 XML</code>-Format ins <code>TUSTEP</code> interne
+                        Dateiformat und zwar als <code>XML</code>-Datei</li>
+                    <li><code>#*export</code> konvertiert eine <code>XML</code>-Datei ins
+                        <code>RTF</code>-Format</li>
+                    <li>Beide Module sind <a href="data/data/importexport.pdf">dokumentiert</a>
+                        (wenn auch nicht Teil des TUSTEP Handbuchs) …</li>
+                </ul>
+                <blockquote class="centered down-50">Mit <code>#*export</code> kann <em>im
+                    Prinzip</em> jede XML-Datei und jedes XML-Format
+                    <strong>strukturiert</strong> in gängige Office Programme überführt
+                    werden</blockquote>
+            </div>       
             <div class="step">
                 <div class="centered">
                     <h1 class="red">F I N I S</h1>
@@ -384,9 +490,8 @@ ENDIF</code></pre>
                 </div>
             </div>
             <div class="step">
-                <h2>Literatur</h2>
-                <h4>Beispieldateien</h4>
-                <p>mit freundlicher Genehmigung von Marjam Mahmoodzada aus:</p>
+                <h2 class="red">Literatur</h2>
+                <h4>Beispieldateien mit freundlicher Genehmigung von Marjam Mahmoodzada aus:</h4>
                 <ul class="small line-height-one-five">
                     <li> Marjam Mahmoodzada: Eine digitale Edition. Briefe von
                         Jacoba van Heemskerck und Franz Marc an Herwarth Walden (1914-1915), Mainz
