@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Von TEI XML zu MSWord</title>
+
+        <!-- meta information -->
+        <meta name="author" content="Thomas Kollatz" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <!-- favicons -->
+        <link rel="shortcut icon" href="resources/img/favicon.png" />
+        <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+        <!-- CSS reset and grid -->
+        <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+        <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+        <!-- fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext"
+            rel="stylesheet" type="text/css" />
+
+        <!-- styles for included libraries -->
+
+        <!-- chartist -->
+        <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+        <!-- unite gallery -->
+        <link rel="stylesheet" href="vendor/unitegallery/css/unite-gallery.css" type="text/css" />
+
+
+        <!-- codemirror -->
+        <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+        <!-- highlight -->
+        <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+        <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+        <!-- swiper -->
+        <link rel="stylesheet" href="vendor/swiper/swiper.min.css" />
+
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+        <!-- standard presentation styles -->
+        <link href="resources/css/style.css" rel="stylesheet" />
+
+        <!-- custom presentation styles -->
+        <link href="resources/css/custom.css" rel="stylesheet" />
+
+        <!-- js needed in head -->
+
+        <!-- greuler -->
+        <script src="vendor/d3/d3-3.5.6.js"></script>
+        <script src="vendor/cola/cola.v3.min.js"></script>
+        <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+        <!-- html5 dataset shim for IE -->
+        <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div class="fallback-message">
+            <p> Your browser <strong>doesn't support the features required</strong> by
+                impress.mod.js, so you are presented with a simplified version of this presentation. </p>
+            <p> For the best experience please use the latest <strong>Chrome</strong>,
+                    <strong>Safari</strong> or <strong>Firefox</strong> browser. </p>
+        </div>
+        <div id="impress">
+            <div class="step">
+                <h4><strong>2017-09-27</strong> | <a href="http://www.itug.de/ITUG2017.html">ITUG
+                        2017 </a>
+                </h4>
+                <h1 class="down-100">Von TEI XML zu MSWord</h1>
+                <h2 class="red up-25">TUSTEP-Modul #*export</h2>
+                <h5 class="down-100">
+                    <strong>Data: </strong><a
+                        href="https://github.com/digicademy/20170929_Der_Sturm"
+                        >https://github.com/digicademy/20170927_TEI2RTF</a>
+                    <br /><strong>Slides: </strong>
+                    <a href="https://dicicademy.github.io/20170927_TEI2RTF"
+                        title="View the presentation online">
+                        https://dicicademy.github.io/20170927_TEI2RTF </a>
+                </h5>
+                <h5>
+                    <strong><a href="http://orcid.org/0000-0003-1904-1841">Thomas
+                        Kollatz</a></strong> | <img src="resources/img/Twitter_bird_logo_2012.svg"
+                        alt="Twitter" class="twitter-icon" />
+                    <a href="https://twitter.com/kol_t" title="Thomas Kollatz on Twitter">@kol_t</a>
+                    | <img src="resources/img/Octicons-mark-github.svg" alt="Twitter"
+                        class="gh-icon" />
+                    <a href="https://github.com/kollatzthomas/" title="Thomas Kollatz on GitHub"
+                        >KollatzThomas</a> | <a href="https://creativecommons.org/licenses/by/4.0/"
+                        >CC-BY 4.0</a>
+                   
+                    <br />Akademie der Wissenschaften und Literatur / Digital Academy | Mainz</h5>
+            </div>
+            <div class="step">
+                <h2>Table of Contents</h2>
+                <ol class="line-height-one-five">
+                    <li> Der Sturm </li>
+                    <li> Digitale Edition</li>
+                </ol>
+            </div>
+            <div class="step">
+                <h2 class="red">01</h2>
+                <h3>Der Sturm</h3>
+            </div>
+           
+            <div class="step">
+                <h2 class="red">02</h2>
+                <h3>Digitale Edition</h3>
+            </div>
+           
+            <div class="step">
+                <h2 class="red">#*import | #*export</h2>
+                <blockquote>Die Standardmakros #*import und #*export sind Teil des modularen TUSTEP
+                    Programmpakets</blockquote>
+                <ul class="line-height-one-five down-50">
+                    <li><code>#*import</code> konvertiert eine Datei aus dem <code>RTF</code>-Format
+                        bzw. dem <code>Word 2003 XML</code>-Format ins <code>TUSTEP</code> interne
+                        Dateiformat und zwar als <code>XML</code>-Datei</li>
+                    <li><code>#*export</code> konvertiert eine <code>XML</code>-Datei ins
+                            <code>RTF</code>-Format</li>
+                    <li>Beide Module sind <a href="data/data/importexport.pdf">dokumentiert</a>
+                        (wenn auch nicht Teil des TUSTEP Handbuchs) …</li>
+                </ul>
+                <blockquote class="centered down-50">Mit <code>#*export</code> kann <em>im
+                        Prinzip</em> jede XML-Datei und jedes XML-Format
+                        <strong>strukturiert</strong> in gängige Office Programme überführt
+                    werden</blockquote>
+            </div>
+            <div class="step">
+                <h2 class="red">Transformation von TEI nach RTF</h2>
+                <table class="medium">
+                    <thead>
+                        <tr>
+                            <th>TEI</th>
+                            <th>TUSTEP</th>
+                            <th>RTF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>109 XML Dateien</td>
+
+                            <td>
+                                <ul class="six columns line-height-one-five">
+                                    <li><code>sturm.tf</code>
+                                        <br />TUSTEP-XML-Datei</li>
+                                    <li><code>style.tf</code>
+                                        <br />TUSTEP-Datei mit STYLE Definitionen </li>
+                                    <li><code>#*export</code>
+                                        <br />TUSTEP Standardmakro </li>
+                                </ul>
+                            </td>
+
+                            <td>RTF-Datei <br />TOC <br />Register</td>
+                        </tr>
+                        <tr>
+                            <td class="centered" colspan="3"
+                                    ><code>#*export,sturm.tf,sturm.rtf,de=style.tf</code></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red">Mockup</h2>
+                <div class="row">
+                    <div class="four columns">
+                        <div class="mfp-lightbox">
+                            <a href="resources/img/mockup.jpg">
+                                <img src="resources/img/mockup.jpg" style="width:35rem" /></a>
+                        </div>
+                    </div>
+                    <div class="eight columns">
+                        <ul class="line-height-one-five">
+                            <li>Metadaten <code>TeiHeader</code></li>
+                            <li>Anrede <code>opener</code></li>
+                            <li>Briefkorpus</li>
+                            <li>Fussnoten <code>note</code></li>
+                            <li>closer <code>closer</code></li>
+                            <li>Register<ul>
+                                    <li>Personen <code>persName</code></li>
+                                    <li>Orte <code>placeName</code>
+                                    </li>
+                                    <li>Werke <code>term</code></li>
+                                </ul></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">$teixml2rtf – the movie</h2>
+                <div class="row centered">
+                    <video controls="controls" style="margin-left:0" width="640" height="480">
+                        <source src="resources/img/sturm.mp4" type="video/mp4"></source>
+                    </video>
+                </div>
+                <div class="row">
+                    <ul class="line-height-one-five medium">
+                        <li>109 XML-Dateien werden aus zwei Verzeichnissen in eine TUSTEP-Datei
+                            geschrieben</li>
+                        <li>Orts- und Personennamen sowie Werke werden für Register vorbereitet</li>
+                        <li>Daten werden beim Lesen entsprechend der Layoutvorgaben aufbereitet</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Beispiel: Registererstellung</h2>
+                <div class="mfp-lightbox row">
+                    <a href="resources/img/1914-07-27_Jacoba_vanHeemskerck.xml.jpeg">
+                        <img src="resources/img/1914-07-27_Jacoba_vanHeemskerck.xml.jpeg"
+                            style="width:60rem;" />
+                    </a>
+                </div>
+                <div><p>Datei: <a href="data/1914-07-27_Jacoba_vanHeemskerck.xml"
+                            >1914-07-27_Jacoba_vanHeemskerck.xml</a></p></div>
+            </div>
+            <div class="step">
+                <h2 class="red">Beispiel: Registererstellung</h2>
+                <div class="mfp-lightbox row">
+                    <a href="resources/img/1914-07-27_Jacoba_vanHeemskerck.xml.png">
+                        <img src="resources/img/1914-07-27_Jacoba_vanHeemskerck.xml.png"
+                            style="width:60rem;" />
+                    </a>
+                </div>
+                <div><p>Datei: <a href="data/1914-07-27_Jacoba_vanHeemskerck.xml"
+                            >1914-07-27_Jacoba_vanHeemskerck.xml</a></p></div>
+            </div>
+            <div class="step">
+                <h2 class="red">Beispiel: Registererstellung</h2>
+                <div class="mfp-lightbox row">
+                    <a href="resources/img/persName.png">
+                        <img src="resources/img/persName.png" style="width:60rem;" />
+                    </a>
+                </div>
+                <div><p>Datei: <a href="data/1914-07-27_Jacoba_vanHeemskerck.xml"
+                            >1914-07-27_Jacoba_vanHeemskerck.xml</a></p></div>
+            </div>
+            <div class="step">
+                <h2 class="red">Beispiel: Registererstellung</h2>
+                <div class="row">
+                    <h3>Semantische TEI XML Auszeichnung <code>&lt;persName&gt;</code> transformieren</h3>
+                    <div>
+                        
+                        <dl class="line-height-one-five">
+                            <dt>Typographie</dt>
+                            <dd>Personenangaben sperren</dd>
+                            <dt>Register</dt> <dd>Normalisierte Form in Personenregister aufnehmen</dd></dl>
+                        
+                </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Beispiel: Registererstellung</h2>
+                <pre><code>&lt;persName ref="http://d-nb.info/gnd/118559737" &gt;Kandinsky&lt;/persName&gt;</code></pre>
+                <hr />
+                <pre><code>ELSEIF (a.hn."persName") THEN
+  ref=GET_ATTRIBUTE (a,"ref","")
+  a="&lt;persName&gt;"
+ --- Personenregistereintrag vorbereiten
+ IF (stck_n.nc." &lt;opener&gt; "," &lt;closer&gt; ") THEN
+  DICT persons LOOKUP ref,num,cnt,regentry
+  t=CONCAT (t,"&lt;xe name='name'&gt;",regentry,"&lt;/xe&gt;")
+ DICT persons4html LOOKUP ref,num,cnt,regentryalt,folioalt
+  IF (num==0) THEN
+   DICT persons4html ADD ref,num,cnt,regentry,folio
+  ELSE
+   folios=APPEND(folioalt,folio)
+ -- Mehrere Verweise auf einen Brief zusammenfassen
+   folios=REDUCE (folios)
+   DICT persons4html UPDATE/QUIET ref,num,cnt,regentry,folios
+  ENDIF
+ ENDIF
+</code></pre>
+                <hr />
+                <pre><code>&lt;persName&gt;Kandinsky&lt;xe name='name'&gt;Kandinsky, Wassily&lt;/xe&gt;&lt;/persName&gt;
+</code></pre></div>
+            <div class="step">
+                <h2 class="red">Beispiel: Registererstellung</h2>
+                <pre><code>&lt;persName ref="http://d-nb.info/gnd/118559737" &gt;Kandinsky&lt;/persName&gt;</code></pre>
+                <hr />
+                <p class="small"><a href="http://d-nb.info/gnd/118559737/about/lds"
+                        >http://d-nb.info/gnd/118559737/about/lds</a>:</p>
+                <pre><code>&lt;http://d-nb.info/gnd/118559737&gt; gndo:preferredNameForThePerson "Kandinsky, Wassily" ;</code></pre>
+                <hr />
+                <pre><code>BUILD S_TABLE personanf=*
+DATA |gndo:preferredNameForThePerson "|
+BUILD S_TABLE personend=*
+DATA |" ;|
+
+IF (personid.ct." d-nb ") THEN
+ url=CONCAT (personid,"/about/lds")
+ content=REQUEST (url)
+ content=DECODE (content,utf8)
+ persname=EXTRACT (content,personanf|,personend)
+ persname=JOIN(persname,"")
+ENDIF</code></pre>
+                <hr />
+                <pre><code>http://d-nb.info/gnd/118559737|Kandinsky, Wassily|gnd-118559737 </code></pre>
+            </div>
+            <div class="step">
+                <h2 class="red">Beispiel: Registererstellung</h2>
+                <div class="row">
+                    <pre><code>&lt;persName&gt;Kandinsky&lt;xe name='name'&gt;Kandinsky, Wassily&lt;/xe&gt;&lt;/persName&gt;</code></pre>
+                    <pre><code>&lt;cstyle name="persName" style=s/&gt;</code></pre>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <div class="mfp-lightbox row">
+                            <a href="resources/img/MSWORD_txt.png">
+                                <img src="resources/img/MSWORD_txt.png" style="width:50rem" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="six columns">
+                        <div class="mfp-lightbox row">
+                            <a href="resources/img/MSWORD_reg.png">
+                                <img src="resources/img/MSWORD_reg.png" style="width:30rem" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Fazit</h2>
+                <div class="mfp-lightbox row">
+                    
+                    <div class="six columns">
+                        
+                    <a href="resources/img/schema.png">
+                        <img src="resources/img/schema.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        
+                        <ul class="line-height-five-one">
+                            <li>tja </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="centered">
+                    <h1 class="red">F I N I S</h1>
+                    <h2>Danke</h2>
+                </div>
+            </div>
+            <div class="step">
+                <h2>Literatur</h2>
+                <h4>Sturm</h4>
+                <ul class="small line-height-one-five">
+                    <li> Marjam Mahmoodzada: Mahmoodzada, Marjam: Eine digitale Edition. Briefe von Jacoba van Heemskerck und Franz Marc an Herwarth Walden (1914-1915), Mainz 2017 (Masterarbeit). <a href="http://www.students.uni-mainz.de/mmahmood/html/"
+                            >http://www.students.uni-mainz.de/mmahmood/html/</a>
+                    </li>
+
+
+                </ul>
+                <h4>Dokumentation</h4>
+                <ul class="small line-height-one-five">
+                    <li>Dokumentation der TUSTEP-Module <a href="data/importexport.pdf">#*import |
+                            #*export</a></li>
+                </ul>
+                <h4>Download</h4>
+                <ul class="small line-height-one-five">
+
+                    <li>
+                        <a href="https://dicicademy.github.io/20170927_TEI2RTF"> Präsentation </a>
+                    </li>
+                    <li> License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY
+                            4.0</a>, Thomas Kollatz</li>
+                </ul>
+            </div>
+        </div>
+        <!-- jquery -->
+        <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+        <!-- unite gallery -->
+        <script type="text/javascript" src="vendor/unitegallery/js/unitegallery.min.js"></script>
+        <script type="text/javascript" src="vendor/unitegallery/themes/tiles/ug-theme-tiles.js"></script>
+        <script type="text/javascript" src="resources/js/unite.gallery.js"></script>
+        <!-- chartist -->
+        <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+        <script src="resources/js/chartist.charts.js"></script>
+        <!-- codemirror -->
+        <script src="vendor/codemirror/lib/codemirror.js"></script>
+        <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+        <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+        <!-- highlight -->
+        <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="resources/js/hljs.linenumbering.js"></script>
+        <!-- swiper -->
+        <script src="vendor/swiper/swiper.min.js"></script>
+        <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            hashnav: true
+        });
+    </script>
+        <!-- magnific popup -->
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+        <script src="resources/js/magnific-popup.lightbox.js"></script>
+        <!-- impress.mod.js -->
+        <script src="vendor/impress/impress.fork.js"></script>
+        <script src="vendor/impress/impress-slidenum.js"></script>
+        <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+    </body>
+</html>
