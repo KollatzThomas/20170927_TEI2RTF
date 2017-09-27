@@ -99,14 +99,19 @@
             <div class="step">
                 <h2>Aufbau des Workshops</h2>
                 <ol class="line-height-one-five">
-                    <li> <a href="#eins">#*import</a> </li>
-                    <li> <a href="#zwei">TUSTEP und XML: Editor</a></li>
-                    <li> <a href="#drei">#*export</a><ol>
+                    <li>
+                        <a href="#eins">#*import</a>
+                    </li>
+                    <li>
+                        <a href="#zwei">TUSTEP und XML: Editor</a></li>
+                    <li>
+                        <a href="#drei">#*export</a><ol>
                             <li>TUSTEP-Datei</li>
                             <li>TEI-Datei</li>
                         </ol>
                     </li>
-                    <li> <a href="#vier">TUSTEP und XML: TUSCRIPT</a></li>
+                    <li>
+                        <a href="#vier">TUSTEP und XML: TUSCRIPT</a></li>
                 </ol>
             </div>
             <div class="step" id="eins">
@@ -121,26 +126,33 @@
                     <li><code>#*import</code> konvertiert eine Datei aus dem <code>RTF</code>-Format
                         bzw. dem <code>Word 2003 XML</code>-Format ins <code>TUSTEP</code> interne
                         Dateiformat und zwar als <code>XML</code>-Datei</li>
-                    <li>Das Modul ist ausführlich dokumentiert: <ul><li><a href="data/importexport.pdf">#*import</a></li></ul></li>
-                        
+                    <li>Das Modul ist ausführlich dokumentiert: <ul>
+                            <li><a href="data/importexport.pdf">#*import</a></li>
+                        </ul></li>
+
                 </ul>
-                <blockquote class="centered down-50">Mit <code>#*import</code> wird eine Office-Datei
-                    in ein vereinfachtes XML-Format konvertiert.</blockquote>
+                <blockquote class="centered down-50">Mit <code>#*import</code> wird eine
+                    Office-Datei in ein vereinfachtes XML-Format konvertiert.</blockquote>
             </div>
             <div class="step">
                 <h2 class="red">Nützliche Kommandos</h2>
                 <table>
                     <thead>
-                        <tr><th>Aufruf</th><th></th></tr>
+                        <tr>
+                            <th>Aufruf</th>
+                            <th></th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><code>#info,import</code></td>
-                            <td>Anzeige der Spezifikationen des Standardmakros <code>#*import</code></td>
+                            <td>Anzeige der Spezifikationen des Standardmakros
+                                <code>#*import</code></td>
                         </tr>
                         <tr>
                             <td><code>#zebe,import</code></td>
-                            <td>Anzeige der kompletten Beschreibung des Standardmakros <code>#*import</code></td>
+                            <td>Anzeige der kompletten Beschreibung des Standardmakros
+                                    <code>#*import</code></td>
                         </tr>
                     </tbody>
                 </table>
@@ -149,7 +161,11 @@
                 <h2 class="red">Syntax</h2>
                 <table>
                     <thead>
-                        <tr><th><code>#*import,</code></th><th></th><th></th></tr>
+                        <tr>
+                            <th><code>#*import,</code></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -172,24 +188,27 @@
                             <td>+ | - </td>
                             <td>löschen | nicht löschen der Zieldateien</td>
                         </tr>
-                        <tr><td><code>ignorieren,</code></td>
+                        <tr>
+                            <td><code>ignorieren,</code></td>
                             <td>- | +</td>
-                        <td>Ignorierbare Tags und Attribute ausgeben | nicht ausgeben</td></tr>
+                            <td>Ignorierbare Tags und Attribute ausgeben | nicht ausgeben</td>
+                        </tr>
                     </tbody>
                 </table>
-                <blockquote class="down-50 centered">Beispiel: <code>#*import,beispiel.rtf,beispiel.tf,,lo=+,ig=-</code></blockquote>
-              
+                <blockquote class="down-50 centered">Beispiel:
+                        <code>#*import,beispiel.rtf,beispiel.tf,,lo=+,ig=-</code></blockquote>
             </div>
             <div class="step">
-                
-                <blockquote class="centered">Import der RTF-Datei <a href=""><code>beispiel.rtf</code></a></blockquote>
-                <div class="substep">
-                    <pre><code>#an,beispiel.rtf
-#da,beispiel.tf
-#*import,beispiel.rtf,beispiel.tf,,lo=+,ig=-</code></pre>
-                                            
+                <h2 class="red"> Import einer RTF-Datei</h2>
+                <p>Quelldatei: <a href="data/ITUG2017/beispiel.rtf">
+                        <code> beispiel.rtf </code>
+                    </a> | Zieldatei: <code>beispiel.tf</code></p>
+                <div class="substep"><h3>Lösung</h3>
+                    <pre><code class="js">Gib Kommando  >#an,beispiel.rtf
+Gib Kommando  >#da,beispiel.tf
+Gib Kommando  >#*import,beispiel.rtf,beispiel.tf,,lo=+,ig=-
+Gib Kommando  >#e,beispiel.tf</code></pre>
                 </div>
-                
             </div>
             <div class="step" id="zwei">
                 <h2 class="red">02</h2>
@@ -201,16 +220,17 @@
                         <div class="six columns">
                             <dl>
                                 <dt>Tags überprüfen</dt>
-                                <dd><code>tpv</code>    Tagprüfung vorwärts</dd>
-                                <dd><code>tpr</code>    Tagprüfung rückwärts</dd>
+                                <dd><code>tpv</code> Tagprüfung vorwärts</dd>
+                                <dd><code>tpr</code> Tagprüfung rückwärts</dd>
                                 <dt>Tags anzeigen</dt>
-                                
-                                <dd><code>tl</code>     Tagliste mit Häufigkeit</dd>
-                                <dd><code>tlh</code>    Tagliste mit Hierarchie "von oben" sortiert</dd>
-                                <dd><code>tli</code>    Tagliste mit Hierarchie "von unten" sortiert (invers)</dd>
-                                <dd><code>tz</code>    Tagzeige</dd>
-                                
-                                <dd class="down-25"><code>alt-g</code>  SELECT_TAGS</dd>
+                                <dd><code>tl</code> Tagliste mit Häufigkeit</dd>
+                                <dd><code>tlh</code> Tagliste mit Hierarchie "von oben"
+                                    sortiert</dd>
+                                <dd><code>tli</code> Tagliste mit Hierarchie "von unten" sortiert
+                                    (invers)</dd>
+                                <dd><code>tz</code> Tagzeige</dd>
+
+                                <dd class="down-25"><code>alt-g</code> SELECT_TAGS</dd>
                             </dl></div>
                         <div class="six columns">
                             <dl>
@@ -220,8 +240,9 @@
                                 <dt>Weitere Anweisungen</dt>
                                 <dd><code>alt-t</code></dd>
                                 <dd><code>alt-v</code></dd>
-                                <dd><code>alt-r</code></dd>                 
-                            </dl> </div></div>
+                                <dd><code>alt-r</code></dd>
+                            </dl>
+                        </div></div>
                 </div>
             </div>
             <div class="step" id="drei">
@@ -233,24 +254,176 @@
                 <blockquote>Das Standardmakro #*export ist Teil des modularen TUSTEP
                     Programmpakets</blockquote>
                 <ul class="line-height-one-five down-50">
-                    
+
                     <li><code>#*export</code> konvertiert eine <code>XML</code>-Datei ins
-                        <code>RTF</code>-Format</li>
-                    <li>Das Modulist dokumentiert:<ul><li><a  target="_blank" href="data/importexport.pdf">#*export</a></li></ul></li>
-                    
+                            <code>RTF</code>-Format</li>
+                    <li>Das Modul ist dokumentiert:<ul>
+                            <li><a target="_blank" href="data/importexport.pdf">#*export</a></li>
+                        </ul></li>
+
                 </ul>
                 <blockquote class="centered down-50">Mit <code>#*export</code> kann <em>im
-                    Prinzip</em> jede XML-Datei und jedes XML-Format
-                    <strong>strukturiert</strong> in gängige Office Programme überführt
+                        Prinzip</em> jede XML-Datei und jedes XML-Format
+                        <strong>strukturiert</strong> in gängige Office Programme überführt
                     werden</blockquote>
+            </div>
+            <div class="step">
+                <h2 class="red">Nützliche Kommandos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aufruf</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>#info,export</code></td>
+                            <td>Anzeige der Spezifikationen des Standardmakros
+                                <code>#*export</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>#zebe,export</code></td>
+                            <td>Anzeige der kompletten Beschreibung des Standardmakros
+                                    <code>#*export</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red">Syntax</h2>
+                <table class="medium">
+                    <thead>
+                        <tr>
+                            <th><code>#*export,</code></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>quelle,</code></td>
+                            <td>Name der Quelldatei</td>
+                            <td>TUSTEP-Datei</td>
+                        </tr>
+                        <tr>
+                            <td><code>ziel,</code></td>
+                            <td>Name der Zieldatei</td>
+                            <td>RTF-Datei</td>
+                        </tr>
+                        <tr>
+                            <td><code>modus,</code></td>
+                            <td>Modus </td>
+                            <td>keine Angaben nötig</td>
+                        </tr>
+                        <tr>
+                            <td><code>loeschen,</code></td>
+                            <td>+ | - </td>
+                            <td>löschen | nicht löschen der Zieldateien</td>
+                        </tr>
+                        <tr>
+                            <td><code>Definitionen,</code></td>
+                            <td>dateiname | -</td>
+                            <td>Name der Datei mit (Format)-Definitionen | Keine Definitionen in
+                                separater Datei</td>
+                        </tr>
+                        <tr>
+                            <td><code>Optionen,</code></td>
+                            <td>- | Blank</td>
+                            <td>keine Definitionen | Alle Blanks exportieren </td>
+                        </tr>
+                        <tr>
+                            <td><code>Anzeigen,</code></td>
+                            <td>- | +</td>
+                            <td>Nicht anzeigen | Anzeigen (bspw. in MS Word</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote class="down-50 centered">
+                    <code>#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,de=-,op=-,an=+</code></blockquote>
+            </div>
+            <div class="step">
+                <h2 class="red"> Export einer RTF-Datei</h2>
+                <p>Quelldatei: <code>beispiel.tf</code>, wobei die Definitionen in dieser Datei
+                    enthalten sind <code>de=-</code> | Zieldatei: <code>beispiel_neu.rtf</code></p>
+                <div class="substep">
+                    <pre><code class="js">Gib Kommando  >#da,beispiel_neu.rtf,FDF-ap
+Gib Kommando  >#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,ig=-</code></pre>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red"> Export einer RTF-Datei</h2>
+                <h3>Aufbau einer Export-Quelldatei</h3>
+                <pre>
+<code>&lt;document source="beispiel.rtf" time="2017-09-27 01:24:37"&gt;
+    &lt;head&gt;
+        &lt;dstyle font="Times" size="11" align="left" hyphenation="on" 
+            tab="35" line-break="expand"/&gt;
+        &lt;pstyle name="p" font="Calibri"/&gt;
+        &lt;pstyle name="Überschrift-1" no-break="title" before="12" 
+            navigation="1" font="Calibri Light" size="16" fgc="2F5496"/&gt;
+        &lt;cstyle name="persName" font="Helvetica" size="9" fgc="000000"/&gt;
+        &lt;cstyle name="placeName" font="Helvetica" size="9" fgc="000000"/&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Textteil --&gt;
+    &lt;/body&gt;
+&lt;document&gt;
+</code>                    
+                </pre>
+                <blockquote>Wie Tags interpretiert und formatiert werden sollen, steht entweder in
+                    der <code>&lt;head&gt;</code> Sektion der zu exportierenden TUSTEP-XML-Datei
+                    oder in einer eigenen Datei mit entsprechenden Definitionen. </blockquote>
+            </div>
+            <div class="step">
+                <h2 class="red">Übung</h2>
+                <p>Beim Export der Datei <code>beispiel.tf</code> sollen Personennamen in roter
+                    Farbe und Ortsangaben in blauer Farbe ausgebeben werden. Datumsangaben sollen
+                    grün formatiert werden.</p>
+                <p>Quelldatei: <code>beispiel.tf</code> | Zieldatei:
+                    <code>beispiel_neu.rtf</code></p>
+                <div class="substep"><h3>Lösung</h3>
+                    <h4>Definitionen</h4><pre>
+<code>&lt;cstyle name="persName" font="Helvetica" size="9" fgc="red"/&gt;
+&lt;cstyle name="placeName" font="Helvetica" size="9" fgc="blue"/&gt;
+&lt;cstyle name="datum" fgc="green"/&gt;
+
+
+&lt;datum&gt;27.09.2017&lt;/datum&gt;</code>
+            </pre>
+                    <h4>Kommando</h4>
+                    <pre><code>#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,ig=-</code></pre>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red"> Export einer RTF-Datei</h2>
+                <h3>Definitionen stehen in eigener Datei</h3>
+                <h4><code>beispiel.tf</code> – Export-Quelldatei ohne &lt;head&gt;-Sektion:</h4>
+                <pre><code>&lt;document source="beispiel.rtf" time="2017-09-27 01:24:37"&gt;
+    &lt;body&gt;
+        &lt;!-- Textteil --&gt;
+    &lt;/body&gt;
+&lt;document&gt;</code></pre>
+                <h4><code>beispiel.sty</code> – Datei mit Definitionen:</h4>
+                <pre><code>&lt;dstyle font="Times" size="11" align="left" hyphenation="on" tab="35" line-break="expand"/&gt;
+&lt;pstyle name="p" font="Calibri"/&gt;
+&lt;pstyle name="‹berschrift-1" no-break="title" before="12" navigation="1" font="Calibri Light" size="16" fgc="2F5496"/&gt;
+&lt;cstyle name="persName" font="Helvetica" size="9" fgc="red"/&gt;
+&lt;cstyle name="placeName" font="Helvetica" size="9" fgc="blue"/&gt;
+&lt;cstyle name="datum" fgc="green"/&gt;
+&lt;!-- document und body-Tag definieren --&gt;
+&lt;alias alias="document" tag="dummy"/&gt;
+&lt;alias alias="body" tag="dummy"/&gt;
+
+</code></pre>
+                <h4>Kommando</h4>
+                <pre><code>#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,ig=-</code></pre>
             </div>
             <div class="step" id="vier">
                 <h2 class="red">04</h2>
                 <h3>TUSTEP und XML: TUSCRIPT</h3>
             </div>
-            
-            
-            <div class="step">
+            <!--   <div class="step">
                 <h2 class="red">Transformation von TEI nach RTF</h2>
                 <h3>Schema</h3>
                 <div class="mfp-lightbox row">
@@ -258,9 +431,9 @@
                         <a href="resources/img/schema.png">
                             <img src="resources/img/schema.png" /></a>
                     </div>
-                    
                 </div>
             </div>
+            -->
             <div class="step">
                 <h2 class="red">Transformation von TEI nach RTF</h2>
                 <table class="medium">
@@ -274,7 +447,6 @@
                     <tbody>
                         <tr>
                             <td>XML Datei</td>
-
                             <td>
                                 <ul class="six columns line-height-one-five">
                                     <li><code>tustep.tf</code>
@@ -287,7 +459,7 @@
                             </td>
 
                             <td><code>ergebnis.rtf</code>
-                                <br/>RTF-Datei </td>
+                                <br />RTF-Datei </td>
                         </tr>
                         <tr>
                             <td class="centered" colspan="3"
@@ -296,6 +468,38 @@
 
                     </tbody>
                 </table>
+            </div>
+            <div class="step">
+                <h2 class="red">Transformation von TEI nach RTF</h2>
+                <p class="medium">Die folgende Beispieldatei wurde dankenswerterweise von Marjam Mahmoodzada (Digitale Akademie Mainz) zur
+                    Verfügung gestellt.
+                
+                     </p>
+                    
+
+
+                
+                <div>
+                    <div class="six columns">
+                        <div class="mfp-lightbox row">
+                        <a href="resources/img/1914-07-27_Jacoba_vanHeemskerck.xml.jpeg"><img src="resources/img/1914-07-27_Jacoba_vanHeemskerck.xml.jpeg"/></a></div>
+                    </div>
+                    <div class="six columns">
+                <p>Es handelt sich um eine <a href="data/1914-07-27_Jacoba_vanHeemskerck.xml"
+                        >Postkarte, die Jacoba van Heemskerck am 27. Juli 1914 an Herwerth
+                        Walden</a> geschrieben hat. Alle Briefe, Tagebücher und Telegramme dieser
+                    Edition sind in <code>TEI XML P5</code> ausgezeichnet.</p>
+                    </div>
+            </div>
+               <p class="small"> Marjam Mahmoodzada: Eine digitale Edition. Briefe von Jacoba van Heemskerck
+                und Franz Marc an Herwarth Walden (1914-1915), Mainz 2017 (Masterarbeit). <a
+                    href="http://www.students.uni-mainz.de/mmahmood/html/"
+                    >http://www.students.uni-mainz.de/mmahmood/html/</a></p>
+            </div>
+            <div class="step">
+                <div class="mfp-lightbox">
+                    <a href="resources/img/1914-07-27_Jacoba_vanHeemskerck.xml.png"><img src="resources/img/1914-07-27_Jacoba_vanHeemskerck.xml.png"/></a></div>
+                <p class="small"><a href="data/1914-07-27_Jacoba_vanHeemskerck.xml">TEI XML</a></p>
             </div>
             <div class="step">
                 <h2 class="red">Praxisbeispiel: Der Sturm</h2>
@@ -323,8 +527,11 @@
                         </ul>
                     </div>
                 </div>
-                <blockquote>Transformation semantischer Auszeichnung in Typographie. Die Semantik der XML-Datei kann in der Form von Formatvorlagen in die RTF-Datei übertragen werden.</blockquote>
+                <blockquote>Transformation semantischer Auszeichnung in Typographie. Die Semantik
+                    der XML-Datei kann in der Form von Formatvorlagen in die RTF-Datei übertragen
+                    werden.</blockquote>
             </div>
+            <!-- 
             <div class="step">
                 <h2 class="red">$teixml2rtf – the movie</h2>
                 <div class="row centered">
@@ -341,6 +548,7 @@
                     </ul>
                 </div>
             </div>
+            -->
             <!-- 
             <div class="step">
                 <h2 class="red">Beispiel: Registererstellung</h2>
@@ -474,15 +682,15 @@ ENDIF</code></pre>
                         bzw. dem <code>Word 2003 XML</code>-Format ins <code>TUSTEP</code> interne
                         Dateiformat und zwar als <code>XML</code>-Datei</li>
                     <li><code>#*export</code> konvertiert eine <code>XML</code>-Datei ins
-                        <code>RTF</code>-Format</li>
+                            <code>RTF</code>-Format</li>
                     <li>Beide Module sind <a href="data/data/importexport.pdf">dokumentiert</a>
                         (wenn auch nicht Teil des TUSTEP Handbuchs) …</li>
                 </ul>
                 <blockquote class="centered down-50">Mit <code>#*export</code> kann <em>im
-                    Prinzip</em> jede XML-Datei und jedes XML-Format
-                    <strong>strukturiert</strong> in gängige Office Programme überführt
+                        Prinzip</em> jede XML-Datei und jedes XML-Format
+                        <strong>strukturiert</strong> in gängige Office Programme überführt
                     werden</blockquote>
-            </div>       
+            </div>
             <div class="step">
                 <div class="centered">
                     <h1 class="red">F I N I S</h1>
@@ -493,9 +701,8 @@ ENDIF</code></pre>
                 <h2 class="red">Literatur</h2>
                 <h4>Beispieldateien mit freundlicher Genehmigung von Marjam Mahmoodzada aus:</h4>
                 <ul class="small line-height-one-five">
-                    <li> Marjam Mahmoodzada: Eine digitale Edition. Briefe von
-                        Jacoba van Heemskerck und Franz Marc an Herwarth Walden (1914-1915), Mainz
-                        2017 (Masterarbeit). <a
+                    <li> Marjam Mahmoodzada: Eine digitale Edition. Briefe von Jacoba van Heemskerck
+                        und Franz Marc an Herwarth Walden (1914-1915), Mainz 2017 (Masterarbeit). <a
                             href="http://www.students.uni-mainz.de/mmahmood/html/"
                             >http://www.students.uni-mainz.de/mmahmood/html/</a>
                     </li>
