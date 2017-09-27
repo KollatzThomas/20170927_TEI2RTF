@@ -348,7 +348,7 @@ Gib Kommando  >#e,beispiel.tf</code></pre>
                     enthalten sind <code>de=-</code> | Zieldatei: <code>beispiel_neu.rtf</code></p>
                 <div class="substep">
                     <pre><code class="js">Gib Kommando  >#da,beispiel_neu.rtf,FDF-ap
-Gib Kommando  >#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,ig=-</code></pre>
+Gib Kommando  >#*export,beispiel.tf,beispiel_neu.rtf,,lo=+</code></pre>
                 </div>
             </div>
             <div class="step">
@@ -383,16 +383,14 @@ Gib Kommando  >#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,ig=-</code></pre>
                 <p>Quelldatei: <code>beispiel.tf</code> | Zieldatei:
                     <code>beispiel_neu.rtf</code></p>
                 <div class="substep"><h3>Lösung</h3>
-                    <h4>Definitionen</h4><pre>
+                    <h4>Definitionen</h4><p>Datei: <code>beispiel.sty</code></p><pre>
 <code>&lt;cstyle name="persName" font="Helvetica" size="9" fgc="red"/&gt;
 &lt;cstyle name="placeName" font="Helvetica" size="9" fgc="blue"/&gt;
 &lt;cstyle name="datum" fgc="green"/&gt;
 
-
-&lt;datum&gt;27.09.2017&lt;/datum&gt;</code>
-            </pre>
+&lt;datum&gt;27.09.2017&lt;/datum&gt;</code> </pre>
                     <h4>Kommando</h4>
-                    <pre><code>#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,ig=-</code></pre>
+                    <pre><code>#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,de=beispiel.sty</code></pre>
                 </div>
             </div>
             <div class="step">
@@ -452,7 +450,7 @@ Gib Kommando  >#*export,beispiel.tf,beispiel_neu.rtf,,lo=+,ig=-</code></pre>
                                     <li><code>tustep.tf</code>
                                         <br />TUSTEP-XML-Datei</li>
                                     <li><code>style.tf</code>
-                                        <br />TUSTEP-Datei mit STYLE Definitionen </li>
+                                        <br />TUSTEP-XML-Datei mit STYLE Definitionen </li>
                                     <li><code>#*export</code>
                                         <br />TUSTEP Standardmakro </li>
                                 </ul>
